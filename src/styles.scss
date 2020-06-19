@@ -1,0 +1,145 @@
+html{
+  height: 100%;
+}
+body {
+background-color:rgba(53, 181, 230,0.1);
+min-height:100%;
+font-family: sans-serif;
+#container{
+height:800px;
+display:flex;
+flex-direction : row;
+justify-content : center;
+align-items :center;
+#umbrella-view{
+  position:relative;
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  img{
+    height:300px;
+    width:350px;
+  }
+  .uploaded-logo{
+    position:absolute;
+    bottom :20px;
+
+  }
+}
+#customization-panel{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:start;
+  flex:1;
+  h4{
+    margin-bottom : 0;
+  }
+  .info-1{
+    margin: 4px 0;
+    font-size:12px;
+  }
+  .info-2{
+    margin-top:0;
+    margin-bottom : 10px;
+    font-size:10px;
+  }
+
+  #color-pallette{
+    display:flex;
+    flex-direction:row;
+     .color-pallette-item{
+       background-clip: padding-box;
+       margin-left:10px;
+       height:25px;
+       width:25px;
+       cursor:pointer;
+       border-radius:50%;
+       &#first-option{
+         background-color:rgb(219, 60, 145);
+         &.active{
+           border: 4px solid rgba(219, 60, 145,0.5);
+           height: 17px;
+           width: 17px;
+          }
+       }
+       &#second-option{
+          background-color:rgb(53, 181, 230);
+          &.active{
+           border: 4px solid rgba(53, 181, 230,0.5);
+           height: 17px;
+           width: 17px;
+          }
+       }
+       &#third-option{
+         background-color:rgb(254, 211, 77);
+         &.active{
+           border: 4px solid rgba(254, 211, 77,0.5);
+           height: 17px;
+           width: 17px;
+
+          }
+       }
+
+
+
+     }
+  }
+
+  .btn-wrapper{
+    position:relative;
+    cursor:pointer;
+    input{
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+      width:300px;
+      height:40px;
+      cursor:pointer;
+      z-index: 9999;
+      
+
+    }
+  }
+  #upload-btn{
+    background-color:rgb(53, 181, 230);
+    width:300px;
+    height:40px;
+    opacity:0.8;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:start;
+    align-items:center;
+    cursor:pointer;
+    .hidden{
+      display:none;
+    }
+    #upload-btn-text{
+      flex:1;
+      font-weight:bold;
+      text-transform:uppercase;
+      font-size: 13px;
+    }
+    &:hover{
+      opacity:1;
+    }
+    &:active{
+      opacity:1;
+      border-style:none;
+    }
+    &:focus{
+      outline:none;
+    }
+
+  }
+  
+
+}
+img[src=""]{
+  display:none;
+}
+}
+}
